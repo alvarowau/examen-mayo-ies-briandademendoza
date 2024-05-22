@@ -1,6 +1,9 @@
-package com.alvarowau.modelos;
+package com.alvarowau.Ejercicio1.modelos;
 
 import java.util.ArrayList;
+
+import com.alvarowau.Ejercicio1.sesiones.GenerarElementosPrueba;
+import com.alvarowau.Ejercicio1.sesiones.RecuperarSesion;
 
 /**
  * La clase Inventario representa una colección de productos y proporciona
@@ -14,12 +17,14 @@ public class Inventario {
     private ArrayList<Producto> lista;
 
     /**
-     * Crea una nueva instancia de Inventario con una lista de productos especificada.
-     * 
-     * @param lista la lista de productos inicial
+     * Crea una nueva instancia de Inventario, recuperando la lista de productos desde una sesión anterior
+     * o generando una lista de elementos de prueba si la sesión está vacía.
      */
-    public Inventario(ArrayList<Producto> lista) {
-        this.lista = lista;
+    public Inventario() {
+        this.lista = RecuperarSesion.recuperarLista();
+        if (lista.isEmpty()) {
+            this.lista = GenerarElementosPrueba.generar();
+        }
     }
 
     /**
@@ -103,4 +108,22 @@ public class Inventario {
             }
         }
     }
+
+    /**
+     * Obtiene la lista de productos en el inventario.
+     * 
+     * @return la lista de productos
+     */
+    public ArrayList<Producto> getLista() {
+        return lista;
+    }
+
+    /**
+     * Establece la lista de productos en el inventario.
+     * 
+     * @param lista la nueva lista de productos
+     */
+    public void setLista(ArrayList<Producto> lista) {
+        this.lista = lista;
+    }   
 }

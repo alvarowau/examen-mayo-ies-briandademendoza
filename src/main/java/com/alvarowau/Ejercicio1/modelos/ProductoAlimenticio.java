@@ -1,4 +1,4 @@
-package com.alvarowau.modelos;
+package com.alvarowau.Ejercicio1.modelos;
 
 /**
  * La clase ProductoAlimenticio extiende la clase Producto para incluir un campo adicional

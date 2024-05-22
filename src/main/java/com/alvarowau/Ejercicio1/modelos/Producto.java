@@ -1,4 +1,4 @@
-package com.alvarowau.modelos;
+package com.alvarowau.Ejercicio1.modelos;
 
 /**
  * La clase Producto representa un producto con un identificador, nombre, precio y cantidad en stock.

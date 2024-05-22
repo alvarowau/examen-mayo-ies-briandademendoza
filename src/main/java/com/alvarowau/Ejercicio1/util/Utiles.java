@@ -1,9 +1,9 @@
-package com.alvarowau.util;
-
-import com.alvarowau.modelos.Producto;
-import com.alvarowau.modelos.ProductoAlimenticio;
+package com.alvarowau.Ejercicio1.util;
 
 import java.util.Scanner;
+
+import com.alvarowau.Ejercicio1.modelos.Producto;
+import com.alvarowau.Ejercicio1.modelos.ProductoAlimenticio;
 
 /**
  * La clase Utiles proporciona métodos utilitarios para mostrar menús
