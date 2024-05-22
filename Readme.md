@@ -4,7 +4,7 @@ Desarrolla un programa que gestione una lista de productos en un inventario. Deb
 
 ## Clases
 
-### Producto
+### Producto ✅
 
 Esta clase representa un producto con los siguientes atributos:
 
@@ -15,31 +15,31 @@ Esta clase representa un producto con los siguientes atributos:
 
 Debe incluir métodos para acceder y modificar estos atributos.
 
-### ProductoAlimenticio
+### ProductoAlimenticio ✅
 
 Esta clase hereda de la clase `Producto` e incluye un atributo adicional:
 
 - `fechaCaducidad` (String)
 
-Además, debes sobrescribir el método `toString()` para incluir esta información.
+Además, debes sobrescribir el método `toString()` para incluir esta información. 
 
-### Inventario
+### Inventario✅
 
 Esta clase contiene un array de objetos de tipo `Producto`. Debe tener métodos para:
 
-- Agregar un producto al inventario.
-- Eliminar un producto del inventario.
-- Mostrar la lista de productos en el inventario.
-- Actualizar el stock de un producto en el inventario.
+- Agregar un producto al inventario. ✅
+- Eliminar un producto del inventario.✅
+- Mostrar la lista de productos en el inventario. ✅
+- Actualizar el stock de un producto en el inventario. ✅
 
 ### Almacen
 
 Esta clase tiene un menú principal con las siguientes opciones:
 
-- Agregar un nuevo producto al inventario.
-- Eliminar un producto del inventario.
-- Mostrar la lista de productos en el inventario.
-- Actualizar el stock de un producto en el inventario.
+- Agregar un nuevo producto al inventario. ✅
+- Eliminar un producto del inventario. ✅
+- Mostrar la lista de productos en el inventario. ✅
+- Actualizar el stock de un producto en el inventario. ✅
 - Guardar la lista de productos en un archivo.
 - Recuperar la lista de productos desde un archivo.
 - Salir del programa.
