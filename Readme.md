@@ -1,77 +1,45 @@
-# Ejercicio Obligatorio: Gestión de Inventario
+# IES Brianda de Mendoza - ELDAM - Programación - mayo 2024-(---)
 
-Desarrolla un programa que gestione una lista de productos en un inventario. Debes implementar las siguientes clases:
+## Ejercicio obligatorio
 
-## Clases
+Desarrolla un programa que gestione una lista de productos de un inventario. Debes implementar las siguientes clases:
 
-### Producto ✅
+### Producto:
+Esta clase representará un producto con los siguientes atributos: id (int), nombre (String), precio (double) y stock (int). Debe incluir métodos para acceder y modificar estos atributos.
 
-Esta clase representa un producto con los siguientes atributos:
+### Producto Alimenticio:
+Esta clase hereda de la clase Producto e incluye un atributo adicional fechaCaducidad (String). Además, debe sobrescribir el método toString() para incluir esta información.
 
-- `id` (int)
-- `nombre` (String)
-- `precio` (double)
-- `stock` (int)
+### Inventario:
+Contendrá un ArrayList de objetos de tipo Producto. Esta clase debe tener métodos para agregar un producto al inventario, eliminar un producto del inventario, mostrar la lista de productos en el inventario y actualizar el stock de un producto en el inventario.
 
-Debe incluir métodos para acceder y modificar estos atributos.
+### Almacen:
+Esta clase tendrá el programa principal con el menú de opciones siguiente:
 
-### ProductoAlimenticio ✅
+1. Agregar un nuevo producto al inventario.
+2. Eliminar un producto del inventario.
+3. Mostrar la lista de productos del inventario.
+4. Actualizar el stock de un producto en el inventario.
+5. Guardar la lista de productos en un fichero.
+6. Recuperar la lista de productos desde un fichero.
+7. Salir del programa.
 
-Esta clase hereda de la clase `Producto` e incluye un atributo adicional:
+En las opciones 5 y 6 debes guardar y recuperar la lista de productos desde un fichero de forma similar a lo realizado en la Tarea 9. Además del código fuente del programa, haz un comentario final que explique el diseño general del programa y cualquier decisión de diseño importante que hayas tomado.
 
-- `fechaCaducidad` (String)
+### Cuestiones breves voluntarias
+(Puedes subir nota un máximo 1,5 puntos)
 
-Además, debes sobrescribir el método `toString()` para incluir esta información. 
+1. Explica brevemente lo que implica poner static a un atributo de una clase, y a un método de una clase.
+2. Comenta las características de la programación funcional y del paradigma declarativo que incorpora Java. Escribe tu opinión sobre las ventajas e inconvenientes que tiene la programación funcional y sobre alguna característica de la programación funcional de Java.
+3. ¿Qué te pareció la noticia del Foro Temático 2? ¿Qué opinas sobre el tema? ¿Conoces aplicaciones de IA para programar? Dime alguna.
 
-### Inventario✅
+### Ejercicio voluntario (Puedes subir nota un máximo 2 puntos)
 
-Esta clase contiene un array de objetos de tipo `Producto`. Debe tener métodos para:
-
-- Agregar un producto al inventario. ✅
-- Eliminar un producto del inventario.✅
-- Mostrar la lista de productos en el inventario. ✅
-- Actualizar el stock de un producto en el inventario. ✅
-
-### Almacen
-
-Esta clase tiene un menú principal con las siguientes opciones:
-
-- Agregar un nuevo producto al inventario. ✅
-- Eliminar un producto del inventario. ✅
-- Mostrar la lista de productos en el inventario. ✅
-- Actualizar el stock de un producto en el inventario. ✅
-- Guardar la lista de productos en un archivo.
-- Recuperar la lista de productos desde un archivo.
-- Salir del programa.
-
-## Diseño del Programa
-
-El programa está diseñado para gestionar un inventario de productos de manera eficiente. Se han implementado clases separadas para representar los productos y el inventario, lo que facilita la extensión y el mantenimiento del código. La clase `Almacen` proporciona una interfaz de usuario sencilla para interactuar con el inventario.
-
-Decisiones de diseño importantes:
-
-- Utilización de la herencia para crear `ProductoAlimenticio` a partir de `Producto`, lo que permite añadir atributos específicos sin duplicar código.
-- Implementación de métodos en la clase `Inventario` para manipular los productos de manera centralizada, mejorando la cohesión y reduciendo la complejidad del código en `Almacen`.
-
-## Cuestiones Breves Voluntarias (Máximo 1,5 puntos)
-
-### Atributos y Métodos `static`
-
-Poner `static` a un atributo de una clase implica que el atributo es compartido por todas las instancias de la clase, en lugar de tener una copia separada para cada instancia. De manera similar, un método `static` pertenece a la clase en sí y no a una instancia específica, por lo que puede ser llamado sin crear una instancia de la clase.
-
-### Programación Funcional en Java
-
-La programación funcional en Java se caracteriza por el uso de funciones como objetos de primera clase, lambdas y el uso de flujos (`streams`). Ventajas: código más conciso, facilidad para escribir código concurrente y paralelo, y mayor expresividad. Inconvenientes: puede ser menos intuitivo para aquellos acostumbrados a la programación imperativa y puede llevar a un uso excesivo de memoria si no se maneja adecuadamente.
-
-### Aplicaciones de IA para Procesamiento de Texto
-
-Existen numerosas aplicaciones de IA para procesamiento de texto, como correctores gramaticales (Grammarly), generadores de texto (GPT-3), y herramientas de traducción automática (Google Translate). Un ejemplo es GPT-3 de OpenAI, que puede generar texto coherente y relevante a partir de una entrada dada.
-
-## Ejercicio Voluntario (Máximo 2 puntos)
-
-Escribe un programa que permita operar con números naturales entre 1 y 999 ingresados por el usuario. El programa leerá números hasta que el usuario pulse un número no válido (menor que 1 o mayor que 999). A partir de ese momento, mostrará los siguientes resultados:
+Se desea escribir un programa que permita operar con números naturales entre 1 y 999 ingresados por el usuario. Se estará leyendo números hasta que el usuario pulse un número no válido (menor que 1 o mayor de 999. Ese número que termina el proceso no debe procesarse). En ese momento debe mostrarnos los siguientes resultados:
 
 - Cuántos números pares se han procesado.
-- La suma de los números procesados.
-- El mayor y el menor de los números procesados.
-- Si se ha procesado algún número perfecto (utiliza un método que determine si un número es perfecto).
+- La suma de los impares procesados.
+- Cuáles son el mayor y el menor de los números procesados.
+- Si hemos procesado algún número perfecto (pondrá "si hay" o "no hay" usando el operador condicional).
+
+Un número es perfecto si es igual a la suma de sus divisores (el 4 no lo es (4 != 1+2) pero el 6 sí lo es (6 = 1+2+3)). Se debe definir un subprograma que nos diga si un número es perfecto y utilizarlo en el main.
